@@ -105,6 +105,23 @@
     finishButton.textContent = 'Sending you the biggest hug! 🫂💗';
     finishButton.disabled = true;
   });
+  const secondMessage = document.createElement('div');
+secondMessage.innerHTML = `
+  <h2>One Last Little Surprise, Jaanu ❤️</h2>
+  <p>Jaanu, if I could wish for one thing today, it would be to be beside you, see your beautiful smile, and wish you a happy birthday in person. 🥹</p>
+  <p>Even though miles separate us, you are always close to my heart. 🫂❤️</p>
+  <p>I can't send you a hug through this screen, so imagine this message holding all the love I wish I could give you today. 💗</p>
+  <p><strong>Happy Birthday once again, my Jaanu! 🎂❤️</strong></p>
+  <p>No distance can make you any less special to me. 💞</p>
+`;
+secondMessage.style.cssText = 'display:none; margin-top:25px; padding:20px; background:#fff0f5; border-radius:15px; line-height:1.8; color:#5d2940;';
+
+document.body.appendChild(secondMessage);
+
+finishButton.addEventListener('click', () => {
+  secondMessage.style.display = 'block';
+  secondMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
 </script>
 </body>
 </html>
